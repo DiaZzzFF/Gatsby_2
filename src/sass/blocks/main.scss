@@ -1,3 +1,18 @@
+.main__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background: linear-gradient(
+    rgba($brown, 0.5),
+    rgba($brown, 0.5),
+  );
+  background-position: center;
+  background-size: cover;
+}
+
 .main__title {
   @include heading;
 }
