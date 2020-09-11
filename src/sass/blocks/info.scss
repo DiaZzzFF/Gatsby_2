@@ -1,3 +1,7 @@
+.info__title {
+  @include heading;
+}
+
 .info__btn {
   color: $orange;
 

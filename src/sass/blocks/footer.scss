@@ -1,0 +1,9 @@
+.footer {
+  background-color: $dark-pink-red;
+}
+
+.footer__title {
+  @include heading;
+
+  color: $orange;
+}
