@@ -4,6 +4,7 @@ import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BackgroundSection from "../components/background-section";
+import Info from "../components/info";
 
 import "../sass/style.scss";
 
@@ -18,6 +19,8 @@ const IndexPage = ({data}) => {
           img={data.img.childImageSharp.fluid}
           title="regular joe's"
         />
+
+        <Info />
       </main>
     </Layout>
   );
