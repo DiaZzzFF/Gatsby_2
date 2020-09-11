@@ -8,3 +8,8 @@
 
   list-style: none;
 }
+
+@mixin heading {
+  font-family: "Courier New", "Courier", monospace;
+  letter-spacing: 0.25rem;
+}

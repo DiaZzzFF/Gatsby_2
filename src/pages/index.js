@@ -12,11 +12,13 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
 
-      <h1>Hi people</h1>
+      <main className="main">
+        <h1 className="main__title">Hi people</h1>
 
-      <p>Welcome to your new Gatsby site.</p>
+        <p>Welcome to your new Gatsby site.</p>
 
-      <FaGulp />
+        <FaGulp />
+      </main>
     </Layout>
   );
 };
