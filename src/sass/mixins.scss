@@ -13,3 +13,15 @@
   font-family: "Courier New", "Courier", monospace;
   letter-spacing: 0.25rem;
 }
+
+@mixin btn {
+  color: $orange;
+
+  border-color: $orange;
+
+  &:hover {
+    color: $dark-pink-red;
+
+    background-color: $orange;
+  }
+}

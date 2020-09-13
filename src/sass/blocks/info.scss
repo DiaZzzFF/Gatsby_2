@@ -3,13 +3,5 @@
 }
 
 .info__btn {
-  color: $orange;
-
-  border-color: $orange;
-
-  &:hover {
-    color: $dark-pink-red;
-
-    background-color: $orange;
-  }
+  @include btn;
 }

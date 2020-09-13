@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BackgroundSection from "../components/background-section";
 import Info from "../components/info";
+import Menu from "../components/menu";
 
 import "../sass/style.scss";
 
@@ -21,6 +22,8 @@ const IndexPage = ({data}) => {
         />
 
         <Info />
+
+        <Menu items={data.menu} />
       </main>
     </Layout>
   );
@@ -33,6 +36,24 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulCoffeeItem(limit: 3) {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width: 50, height: 50) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }

@@ -27,7 +27,6 @@ export default class Header extends PureComponent {
     };
   }
 
-  // не знаю, как изменить код, чтобы убрать ошибку
   handleNavbar = () => {
     if (this.state.navbarOpen) {
       this.setState({

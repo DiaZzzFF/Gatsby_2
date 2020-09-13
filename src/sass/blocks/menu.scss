@@ -1,0 +1,16 @@
+.menu {
+  background-color: $grey;
+}
+
+.menu__title {
+  @include heading;
+
+  &--price {
+    color: $orange;
+  }
+}
+
+.menu__btn {
+  @include btn;
+}
+
