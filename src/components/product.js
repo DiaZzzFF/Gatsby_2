@@ -15,7 +15,14 @@ const Product = ({product}) => {
           <h6 className="product__title">{product.title}</h6>
           <h6 className="product__title">${product.price}</h6>
 
-          <button className="product__btn btn mt-3 text-capitalize">
+          <button
+            className="product__btn btn mt-3 text-capitalize snipcart-add-item"
+            data-item-id={product.id}
+            data-item-price={product.price}
+            data-item-url="https://sharp-hopper-791c98.netlify.app/"
+            data-item-image={product.image.fluid.src}
+            data-item-name={product.title}
+          >
             add to cart
           </button>
         </div>
