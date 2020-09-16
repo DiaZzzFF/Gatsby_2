@@ -39,7 +39,7 @@ const Products = () => {
                 {data.products.edges.map(({node: product}) => {
                   return (
                     <Product
-                      key="product.id"
+                      key={product.id}
                       product={product}
                     />
                   );
