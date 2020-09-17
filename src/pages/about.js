@@ -12,7 +12,7 @@ import "../sass/style.scss";
 const AboutPage = ({data}) => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
 
       <main className="main">
         <BackgroundSection
