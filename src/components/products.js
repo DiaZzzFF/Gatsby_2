@@ -7,7 +7,7 @@ import Title from "../components/title";
 
 const getProducts = graphql`
   {
-    products: allContentfulCoffeeProduct(limit: 2) {
+    products: allContentfulCoffeeProduct {
       edges {
         node {
           id

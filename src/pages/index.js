@@ -45,7 +45,7 @@ export const query = graphql`
         }
       }
     }
-    menu: allContentfulCoffeeItem(limit: 3) {
+    menu: allContentfulCoffeeItem {
       edges {
         node {
           id
