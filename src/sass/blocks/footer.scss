@@ -1,9 +1,29 @@
 .footer {
-  background-color: $dark-pink-red;
+  width: 100%;
+  
+  background-color: $black;
 }
 
-.footer__title {
+.footer__wrapper {
+  @include wrapper;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  max-width: 1140px;
+  min-height: 73px;
+  padding: 15px;
+}
+
+.footer__copyright{
   @include heading;
 
+  margin: auto;
+
+  font-size: 18px;
+  font-weight: 500;
+
   color: $orange;
+  text-transform: capitalize;
 }

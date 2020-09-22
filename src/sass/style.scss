@@ -1,5 +1,4 @@
 @import "../sass/normalize.scss";
-@import "../sass/bootstrap.scss";
 @import "../sass/fonts.scss";
 @import "../sass/global.scss";
 @import "../sass/variables.scss";
@@ -12,9 +11,10 @@
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< main >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @import "../sass/blocks/main.scss";
+@import "../sass/blocks/title-section.scss";
 @import "../sass/blocks/info.scss";
 @import "../sass/blocks/menu.scss";
-@import "../sass/blocks/product.scss";
+@import "../sass/blocks/products.scss";
 @import "../sass/blocks/contact.scss";
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

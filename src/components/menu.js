@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import Img from "gatsby-image";
 
-import Title from "../components/title";
+import TitleSection from "../components/title-section";
 
 
 const getCategories = (items) => {
@@ -51,83 +51,71 @@ export default class Menu extends PureComponent {
   render() {
     if (this.state.items.length > 0) {
       return (
-        <section className="menu py-5">
-          <div className="container">
-            <Title title="best of our menu" />
+        <section className="menu">
+          <div className="menu__wrapper">
+            <TitleSection title="best of our menu" />
 
             {/* categories */}
 
-            <div className="row mb-5">
-              <div className="col-10 mx-auto text-center">
-                {this.state.categories.map((category, index) => {
-                  return (
-                    <button
-                      key={index}
-                      type="button"
-                      className="menu__btn btn text-capitalize m-3"
-                      onClick={() => {
-                        this.handleItems(category);
-                      }}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
-              </div>
+            <div className="menu__category">
+              {this.state.categories.map((category, index) => {
+                return (
+                  <button
+                    className="menu__btn"
+                    type="button"
+                    key={index}
+                    onClick={() => {
+                      this.handleItems(category);
+                    }}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
             </div>
 
             {/* items */}
 
-            <div className="row">
+            <ul className="menu__list">
               {this.state.coffeeItems.map(({node}) => {
                 return (
-                  <div
+                  <li
+                    className="menu__item"
                     key={node.id}
-                    className="col-11 col-md-6 my-3 d-flex mx-auto"
                   >
-                    <div>
+                    <div className="menu__img-box">
                       <Img fixed={node.image.fixed} />
                     </div>
 
                     {/* item text */}
 
-                    <div className="flex-grow-1 px-3">
-                      <div className="d-flex justify-content-between">
-                        <h6 className="menu__title mb-0 text-capitalize">
-                          <small>{node.title}</small>
-                        </h6>
-                        <h6 className="menu__title menu__title--price mb-0 text-capitalize">
-                          <small>${node.price}</small>
-                        </h6>
+                    <div className="menu__text-box">
+                      <div className="menu__text-row">
+                        <h3 className="menu__title">{node.title}</h3>
+                        <span className="menu__price">${node.price}</span>
                       </div>
 
-                      <p className="text-muted">
-                        <small>
-                          {node.description.description}
-                        </small>
+                      <p className="menu__text">
+                        {node.description.description}
                       </p>
                     </div>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         </section>
       );
 
     } else {
       return (
-        <section className="menu py-5">
-          <div className="container">
-            <Title title="best of our menu" />
+        <section className="menu">
+          <div className="menu__wrapper">
+            <TitleSection title="best of our menu" />
 
-            <div className="row">
-              <div className="col-10 col-sm-6 mx-auto text-center text-capitalize">
-                <h1>
-                  there are no items to display
-                </h1>
-              </div>
-            </div>
+            <h3 className="menu__no-items">
+              There are no items to display...
+            </h3>
           </div>
         </section>
       );

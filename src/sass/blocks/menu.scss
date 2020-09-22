@@ -1,16 +1,104 @@
 .menu {
-  background-color: $grey;
+  width: 100%;
+
+  background-color: $very-light-yellow;
 }
 
-.menu__title {
-  @include heading;
+.menu__wrapper {
+  @include wrapper;
 
-  &--price {
-    color: $orange;
-  }
+  max-width: 1140px;
+  padding: 48px 15px;
+}
+
+.menu__category {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu__btn {
   @include btn;
+
+  margin: 16px;
 }
 
+.menu__list {
+  @include ul-style;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu__item {
+  display: flex;
+
+  width: 48%;
+  min-height: 60px;
+  margin-right: 4%;
+  margin-bottom: 25px;
+  padding: 15px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    outline: 1px solid black;
+  }
+}
+
+.menu__img-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.menu__text-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.menu__text-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__title,
+.menu__price,
+.menu__no-items {
+  @include heading;
+
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.menu__price {
+  margin-left: 15px;
+
+  font-weight: 900;
+  color: $orange;
+}
+
+.menu__text {
+  font-size: 14px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .menu__list {
+    justify-content: center;
+  }
+
+  .menu__item {
+    width: 100%;
+    margin-right: 0;
+    padding: 5px;
+  }
+}

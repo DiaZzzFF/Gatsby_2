@@ -1,68 +1,88 @@
 import React from "react";
 
-import Title from "../components/title";
+import TitleSection from "../components/title-section";
 
 
 const Contact = () => {
   return (
-    <section className="contact py-5">
-      <Title title="contact us" />
+    <section className="contact">
+      <div className="contact__wrapper">
+        <TitleSection title="contact us" />
 
-      <div className="row">
-        <div className="col-10 col-sm-8 col-md-6 mx-auto">
-          <form
-            action="https://formspree.io/mjvpbagg"
-            method="POST"
-          >
-            {/* name */}
+        <form
+          className="contact__form"
+          action="https://formspree.io/mjvpbagg"
+          method="POST"
+        >
+          {/* name */}
 
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                className="form-control"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="john smith"
-              />
-            </div>
-
-            {/* email */}
-
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                className="form-control"
-                type="text"
-                name="email"
-                id="email"
-                placeholder="email@email"
-              />
-            </div>
-
-            {/* description */}
-
-            <div className="form-group">
-              <label htmlFor="description">Description</label>
-              <textarea
-                className="form-control"
-                name="description"
-                id="description"
-                placeholder="your description here..."
-                rows="5"
-              />
-            </div>
-
-            {/* submit */}
-
-            <button
-              type="submit"
-              className="contact__btn btn btn-block text-capitalize mt-5"
+          <div className="contact__group">
+            <label
+              className="contact__label"
+              htmlFor="name"
             >
-              submit
-            </button>
-          </form>
-        </div>
+              Name
+            </label>
+
+            <input
+              className="contact__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="john smith"
+              required
+            />
+          </div>
+
+          {/* email */}
+
+          <div className="contact__group">
+            <label
+              className="contact__label"
+              htmlFor="email"
+            >
+              Email
+            </label>
+
+            <input
+              className="contact__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@email.com"
+              required
+            />
+          </div>
+
+          {/* description */}
+
+          <div className="contact__group">
+            <label
+              className="contact__label"
+              htmlFor="description"
+            >
+              Description
+            </label>
+
+            <textarea
+              className="contact__textarea"
+              name="description"
+              id="description"
+              placeholder="your description here..."
+              rows="5"
+              required
+            />
+          </div>
+
+          {/* submit */}
+
+          <button
+            className="contact__btn"
+            type="submit"
+          >
+            submit
+          </button>
+        </form>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import {StaticQuery, graphql} from "gatsby";
 
 import Product from "../components/product";
-import Title from "../components/title";
+import TitleSection from "../components/title-section";
 
 
 const getProducts = graphql`
@@ -31,11 +31,11 @@ const Products = () => {
       query={getProducts}
       render={(data) => {
         return (
-          <section className="py-5">
-            <div className="container">
-              <Title title="our products" />
+          <section className="products">
+            <div className="products__wrapper">
+              <TitleSection title="our products" />
 
-              <div className="row">
+              <ul className="products__list">
                 {data.products.edges.map(({node: product}) => {
                   return (
                     <Product
@@ -44,7 +44,7 @@ const Products = () => {
                     />
                   );
                 })}
-              </div>
+              </ul>
             </div>
           </section>
         );

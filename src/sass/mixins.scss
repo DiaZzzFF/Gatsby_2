@@ -10,18 +10,35 @@
 }
 
 @mixin heading {
+  margin: 0;
+
   font-family: "Courier New", "Courier", monospace;
-  letter-spacing: 0.25rem;
+  letter-spacing: 4px;
+  text-align: center;
 }
 
 @mixin btn {
-  color: $orange;
+  padding: 6px 12px;
 
-  border-color: $orange;
+  line-height: 1.5;
+  color: $orange;
+  text-transform: capitalize;
+
+  background-color: transparent;
+  border: 1px solid $orange;
+  border-radius: 4px;
+  
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:hover {
-    color: $dark-pink-red;
+    color: $black;
 
     background-color: $orange;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

@@ -1,7 +1,30 @@
-.info__title {
-  @include heading;
+.info {
+  width: 100%;
+}
+
+.info__wrapper {
+  @include wrapper;
+
+  max-width: 1140px;
+  padding: 48px 15px;
+
+  text-align: center;
+}
+
+.info__text {
+  @include wrapper;
+
+  max-width: 760px;
+  margin-bottom: 48px;
+  padding: 0 15px;
+
+  font-size: 20px;
+  font-weight: 300;
+  color: #6c757d;
 }
 
 .info__btn {
   @include btn;
+
+  text-transform: uppercase;
 }

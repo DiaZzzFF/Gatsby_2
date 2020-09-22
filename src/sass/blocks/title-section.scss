@@ -1,0 +1,8 @@
+.title-section {
+  @include heading;
+
+  margin-bottom: 16px;
+
+  font-size: 56px;
+  text-transform: capitalize;
+}

@@ -1,3 +1,10 @@
+.main {
+  width: 100%;
+  min-height: calc(100vh - 145px);
+
+  background-color: white;
+}
+
 .main__bg {
   display: flex;
   align-items: center;
@@ -15,4 +22,8 @@
 
 .main__title {
   @include heading;
+
+  font-size: 56px;
+  color: white;
+  text-transform: uppercase;
 }

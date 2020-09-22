@@ -13,7 +13,7 @@ const BackgroundSection = ({img, imgTransparent, styleClass, title, children}) =
       className={styleClass}
       fluid={backgroundFluidImageStack}
     >
-      <h1 className="main__title text-white text-uppercase text-center display-4 font-weight-bold">
+      <h1 className="main__title">
         {title}
       </h1>
 
